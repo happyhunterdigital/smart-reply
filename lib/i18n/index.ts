@@ -1,7 +1,7 @@
 import ptBRCatalog from "./pt-BR.json";
 import zhTW from "./zh-TW.json";
 
-export const LOCALE_COOKIE = "openreply-locale";
+export const LOCALE_COOKIE = "smart-reply-locale";
 export type Locale = "en" | "zh-TW" | "pt-BR";
 export type MessageKey = keyof typeof zhTW;
 

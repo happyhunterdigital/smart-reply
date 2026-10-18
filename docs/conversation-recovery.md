@@ -1,6 +1,6 @@
 # Conversation detail failures (issue #60)
 
-Issue: https://github.com/diwenne/openreply/issues/60
+Issue: https://github.com/happyhunterdigital/smart-reply/issues/60
 
 ## Observed behavior
 
@@ -47,7 +47,7 @@ recover. Warning logs contain only code/subcode/trace, not credentials or chats.
 The identical application code and regression tests passed TypeScript, lint,
 all 247 tests (including 16 recovery tests), and the production build on the
 reporter's test branch:
-https://github.com/TylonHH/openreply/actions/runs/34864292076
+https://github.com/TylonHH/smart-reply/actions/runs/34864292076
 
 The reporter deployed that build and confirmed the previously affected inbox
 loads again. Runtime logs changed from whole-list errors to isolated detail

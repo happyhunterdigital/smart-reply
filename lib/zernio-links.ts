@@ -4,9 +4,9 @@ export function zernioLink({ path = '/', placement }: { path?: string; placement
   if (/^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|\/\/)/.test(path)) throw new Error('Expected a Zernio destination.');
   const url = new URL(path.replace(/^\/+/, ''), `${ZERNIO_REFERRAL_BASE}/`);
   if (!['zernio.link', 'zernio.com', 'docs.zernio.com'].includes(url.hostname) || url.protocol !== 'https:') throw new Error('Expected a Zernio destination.');
-  url.searchParams.set('utm_source', 'openreply');
+  url.searchParams.set('utm_source', 'smart-reply');
   url.searchParams.set('utm_medium', 'sponsorship');
-  url.searchParams.set('utm_campaign', 'openreply-integration');
+  url.searchParams.set('utm_campaign', 'smart-reply-integration');
   url.searchParams.set('utm_content', placement);
   return url.toString();
 }

@@ -905,7 +905,7 @@ describe("DM Worker — one private reply per comment", () => {
     mockPrisma.dmLog.findFirst.mockImplementation(
       async (args: { where?: { status?: string } } = {}) =>
         args.where?.status === "SENT"
-          ? { automation: { name: "openreply 1" } }
+          ? { automation: { name: "smart-reply 1" } }
           : { commenterName: "commenter_user" }
     );
 
@@ -918,7 +918,7 @@ describe("DM Worker — one private reply per comment", () => {
       expect.objectContaining({
         data: expect.objectContaining({
           status: "SKIPPED_DEDUP",
-          errorMessage: expect.stringContaining("openreply 1"),
+          errorMessage: expect.stringContaining("smart-reply 1"),
         }),
       })
     );

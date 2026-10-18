@@ -3,7 +3,7 @@
 > **For agentic workers:** Use subagent-driven-development or executing-plans task by task.
 
 **Goal:** Add an optional Zernio Instagram provider and contextual sponsor onboarding.
-**Architecture:** Preserve OpenReply's campaign engine and direct Meta support. Store provider identity on InstagramAccount and credentials in a workspace-owned ZernioConnection; map normalized Zernio events into existing queue events.
+**Architecture:** Preserve Smart Reply's campaign engine and direct Meta support. Store provider identity on InstagramAccount and credentials in a workspace-owned ZernioConnection; map normalized Zernio events into existing queue events.
 **Tech Stack:** Next.js 16, React 19, Prisma 7/PostgreSQL, BullMQ/Redis, Vitest.
 **Spec:** docs/superpowers/specs/2026-09-08-zernio-provider-design.md
 
@@ -13,7 +13,7 @@
 - New functions with more than two arguments take an object parameter.
 - Raw GET fetches use cache: 'no-store'.
 - Follow public/design.md in the Zernio source repo for sponsor assets and treatment.
-- Marketing UTMs: source=openreply, medium=sponsorship, campaign=openreply-integration; unique content per placement.
+- Marketing UTMs: source=smart-reply, medium=sponsorship, campaign=smart-reply-integration; unique content per placement.
 - Work only in the isolated worktree; never mutate production/customer data.
 
 ### Task 1: Provider runtime and compatibility
@@ -38,7 +38,7 @@
 
 **Files:** README.md, docs/setup.md, docs/zernio.md, app/page.tsx, components/sidebar.tsx, public/brand/zernio SVG assets, lib/zernio-links.ts, sponsor component/CSS.
 - [ ] Add official assets and centralized UTM helper with a test preserving query/hash and distinguishing placement.
-- [ ] Refresh the whole public landing page with clearer hierarchy and an attractive markup-built comment-to-DM preview. Preserve OpenReply identity and useful existing links/SEO. Add small hero credit, setup option, FAQ/footer links and sidebar credit, applying Zernio brand guide within OpenReply identity.
+- [ ] Refresh the whole public landing page with clearer hierarchy and an attractive markup-built comment-to-DM preview. Preserve Smart Reply identity and useful existing links/SEO. Add small hero credit, setup option, FAQ/footer links and sidebar credit, applying Zernio brand guide within Smart Reply identity.
 - [ ] Rewrite setup and AI assistant prompt with provider choice before Meta secrets/review. Explain unrestricted key, paid service, self-hosting and feature limits.
 - [ ] Inspect desktop/mobile and all Zernio outbound links.
 
@@ -46,4 +46,4 @@
 
 - [ ] Run npm test, npm run typecheck, npm run lint, npm run build; compare baseline failures where present.
 - [ ] Review whole diff for tenant isolation, retries/dedup, OAuth state and secrets, feature parity and honest copy.
-- [ ] Fix findings, commit, push feature branch to owned fork and open PR against diwenne/openreply main with scope, migration, checks and live-test limitations.
+- [ ] Fix findings, commit, push feature branch to owned fork and open PR against happyhunterdigital/smart-reply main with scope, migration, checks and live-test limitations.
