@@ -12,7 +12,7 @@ What needs to be done?
 
 ## Why It Matters
 
-Why is this useful for InstaReply users or contributors?
+Why is this useful for Smart Reply users or contributors?
 
 ## Files Or Areas
 
